@@ -28,7 +28,7 @@ enum type {
 `
 const Query = `
 type Query {
-    media(type:type,pagination:page_limit!):[Media]
+    media(user_id:String!,type:type,pagination:page_limit!):[Media]
 }
 
 `

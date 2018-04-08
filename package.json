@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "babel src -d build && node ./build/server.js",
+    "build": "babel src -d build"
   },
   "author": "",
   "license": "ISC",
@@ -13,10 +15,12 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "graphql": "^0.13.2",
-    "graphql-tools": "^2.23.1"
+    "graphql-tools": "^2.23.1",
+    "neo4j-driver": "^1.5.0",
+    "node-cleanup": "^2.1.2"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -25,7 +29,9 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "^6.26.0",
     "casual": "^1.5.19",
+    "is-promise": "^2.1.0",
     "jest": "^22.4.3",
-    "jest-cli": "^22.4.3"
+    "jest-cli": "^22.4.3",
+    "lodash": "^4.17.5"
   }
 }
