@@ -1,7 +1,7 @@
 const config = {}
 
 config.server = {
-  port: process.env.SERVER_PORT || 8081
+  port: process.env.SERVER_PORT || 3000
 
 }
 
