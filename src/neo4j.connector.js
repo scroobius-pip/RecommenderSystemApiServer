@@ -46,8 +46,7 @@ export default class Neo4jGraphql {
     `
     console.log(`skip: ${(limit * (page - 1))} limit:${limit}`)
     const session = this.client.session()
-    // const result = await session.run(hybrid_query, { user_id: user_id, limit: limit, skip: (limit * (page - 1)) })
-    // return result.records
+
     const result = await session.readTransaction((transaction) => {
       return transaction.run(hybrid_query, { user_id: user_id, limit: limit, skip: (limit * (page - 1)) })
     })

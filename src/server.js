@@ -1,6 +1,6 @@
 import schema from './schema'
 import Resolvers from './resolvers'
-import mockResolvers from './mock'
+// import mockResolvers from './mock'
 import express from 'express'
 import bodyParser from 'body-parser'
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express'
