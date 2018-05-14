@@ -6,7 +6,7 @@ config.server = {
 }
 
 config.neo4j = {
-  host: process.env.NEO4J_HOST || 'bolt://localhost',
+  host: process.env.NEO4J_HOST || 'bolt://206.187.199.187',
   port: process.env.NEO4J_PORT || 7687,
   username: process.env.NEO4J_USERNAME || 'neo4j',
   password: process.env.NEO4J_PASSWORD || 'miriamisnice'
