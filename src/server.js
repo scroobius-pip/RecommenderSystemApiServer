@@ -17,7 +17,7 @@ const executableSchema = makeExecutableSchema({
 
 // Initialize the app
 const app = express()
-
+app.use(cors())
 // The GraphQL endpoint
 app.use('/graphql', bodyParser.json(), graphqlExpress({
   schema: executableSchema,
@@ -30,7 +30,6 @@ const engine = new ApolloEngine({
   apiKey: 'service:scroobius-pip-440:G8Hw9uiX4-X0OXUPFZzkZA'
 })
 
-app.use(cors())
 // GraphiQL, a visual editor for queries
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }))
 
