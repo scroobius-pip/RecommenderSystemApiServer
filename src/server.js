@@ -6,6 +6,7 @@ import bodyParser from 'body-parser'
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express'
 import { makeExecutableSchema } from 'graphql-tools'
 import { ApolloEngine } from 'apollo-engine'
+import cors from 'cors'
 import config from './config'
 
 // Put together a schema
@@ -29,6 +30,7 @@ const engine = new ApolloEngine({
   apiKey: 'service:scroobius-pip-440:G8Hw9uiX4-X0OXUPFZzkZA'
 })
 
+app.use(cors())
 // GraphiQL, a visual editor for queries
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }))
 
